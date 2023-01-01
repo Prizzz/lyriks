@@ -6,11 +6,12 @@ import { useGetTopChartsQuery } from '../redux/services/shazamCore';
 const Discover = () => {
   /*const { data, isFetching, error } = useGetTopChartsQuery();*/
   const genreTitle = 'Pop';
-  const isFetching = true;
+  const isFetching = false;
+  const error = true;
 
   if (isFetching) return <Loader title="Loading songs..." />;
 
-  //if (error) return <Error />;
+  if (error) return <Error />;
 
   return (
     <div className="flex flex-col">
